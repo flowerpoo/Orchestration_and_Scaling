@@ -90,3 +90,27 @@ Step 3: Version Control
    - Create a CodeCommit repository.
 
    - Push the MERN application source code to the CodeCommit repository.
+
+* Go To AWS code commit and create a repository, make a note you can't ssh into your account by root user so go to IAM user and create a new user with  AWSCodeCommitPowerUse access.
+* After creating of the user go to HTTPS Git credentials for AWS CodeCommit then generate a new credencials and store the credencials.
+![alt text](image.png) 
+* Then go to AWS code commit AWS repository click on the HTTPS to copy the repository link to clone 
+![alt text](image-1.png)
+* Open git bash in your machine and then clone the repsoitory there, then GIT credencials manager pop up update IAM user username and password then it start clone your repository.
+* Then added files which you need to upload in code commit then the process is normal one which we follows while upload in git.
+```
+git status
+git add .
+git commit -m "commit message"
+git push 
+```
+* one done do to your AWS reposiotry and verify the changes.
+![alt text](image-2.png)
+
+Step 4: Continuous Integration with Jenkins
+
+1. Set Up Jenkins:
+
+   - Install Jenkins on an EC2 instance.
+
+   - Configure Jenkins with necessary plugins.
