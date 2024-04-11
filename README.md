@@ -55,7 +55,7 @@ Created the Docker file which expose to th eport 3000, build and run docker cont
 ![alt text](frontend_localsetup.PNG)
 
 # Docker compose
-Created docker compose file to trst all the dockerfile is up and running fin ewith perfect sink.
+Created docker compose file to trst all the dockerfile is up and running fine with perfect sink.
 ![alt text](<docker compose file.PNG>)
 
 2. Push Docker Images to Amazon ECR:
@@ -73,6 +73,7 @@ docker tag frontend_service:v1.0 flowerking21/micro_frontendservice:latest
 docker push flowerking21/micro_frontendservice:latest
 ```
 Login to AWS console, create a ECR repository and push the image to the repository.
+Repeat the steps for all 3 services 
 ```
 #Create a ECR repository 
 aws ecr create-repository --repository-name micro_frontendservice --region ap-south-1
@@ -114,3 +115,16 @@ Step 4: Continuous Integration with Jenkins
    - Install Jenkins on an EC2 instance.
 
    - Configure Jenkins with necessary plugins.
+
+* Launch a EC2 instance with jenkins, docker, aescli, git, kubectll etc.,
+* After launching the instance Jenkins server is available in port 8080
+```
+http://<public_ip>:8080
+```
+2. Create Jenkins Jobs:
+
+   - Create Jenkins jobs for building and pushing Docker images to ECR.
+
+   - Trigger the Jenkins jobs whenever there's a new commit in the CodeCommit repository.
+
+* J
