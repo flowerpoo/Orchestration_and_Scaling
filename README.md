@@ -127,4 +127,4 @@ http://<public_ip>:8080
 
    - Trigger the Jenkins jobs whenever there's a new commit in the CodeCommit repository.
 
-* J
+* Jenkinsfile is updated above.
